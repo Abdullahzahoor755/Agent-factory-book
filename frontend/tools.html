@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Tools | Agent Factory Book</title><link rel="stylesheet" href="css/style.css"></head>
+<body data-page="tools"><main class="content" style="margin-left:0;width:100%;height:auto;overflow:visible;padding:40px 32px;"><section class="hero reveal"><p class="eyebrow">Builder</p><h1>API Tools</h1><p class="subtitle">Define safe tools for the agent.</p></section>
+<section class="section reveal"><div class="content-card stack">
+<form id="toolForm" class="stack">
+<input name="connection_id" placeholder="Connection ID" required>
+<input name="tool_name" placeholder="Tool name" required>
+<textarea name="description" rows="3" placeholder="Describe what the tool does" required></textarea>
+<input name="method" placeholder="GET | POST | PUT | DELETE" required>
+<input name="endpoint" placeholder="/path or full URL" required>
+<textarea name="request_schema" rows="4" placeholder='{"type":"object"}'></textarea>
+<textarea name="response_schema" rows="4" placeholder='{"type":"object"}'></textarea>
+<input name="safety_level" placeholder="read | write | delete" required>
+<button class="button button--primary" type="submit">Save tool</button>
+</form>
+<div class="chat-controls">
+<input id="toolId" placeholder="Tool ID">
+<button id="testToolBtn" class="button button--secondary" type="button">Test tool</button>
+<button id="deleteToolBtn" class="button button--secondary" type="button">Delete tool</button>
+</div>
+<pre id="toolStatus" class="muted"></pre>
+<div id="toolsList"></div>
+</div></section></main><script src="js/script.js"></script></body></html>

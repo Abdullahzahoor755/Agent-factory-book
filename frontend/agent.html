@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Agent | Agent Factory Book</title><link rel="stylesheet" href="css/style.css"></head>
+<body data-page="agent"><main class="content" style="margin-left:0;width:100%;height:auto;overflow:visible;padding:40px 32px;"><section class="hero reveal"><p class="eyebrow">Agent</p><h1>Authenticated Agent</h1><p class="subtitle">Ask the book tutor or let the agent call your connected tools safely.</p></section>
+<section class="section reveal"><div class="content-card stack">
+<form id="agentForm" class="stack">
+<textarea name="question" rows="5" placeholder="Ask in natural language" required></textarea>
+<div class="chat-controls">
+<select name="mode"><option value="normal">normal</option><option value="explain_simple">explain_simple</option><option value="summarize">summarize</option><option value="quiz">quiz</option><option value="practical_task">practical_task</option><option value="interview_prep">interview_prep</option></select>
+<input name="chapter" placeholder="Optional chapter filter">
+<input name="tool_hint" placeholder="Optional tool hint">
+</div>
+<label><input name="confirm" type="checkbox"> Confirm write/delete tool calls</label>
+<button class="button button--primary" type="submit">Send</button>
+</form>
+<pre id="agentStatus" class="muted"></pre>
+<article class="content-card"><h3>Answer</h3><pre id="agentAnswer" class="subtitle"></pre></article>
+<article class="content-card"><h3>Sources</h3><pre id="agentSources" class="subtitle"></pre></article>
+</div></section></main><script src="js/script.js"></script></body></html>

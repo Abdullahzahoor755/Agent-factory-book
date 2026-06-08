@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Connections | Agent Factory Book</title><link rel="stylesheet" href="css/style.css"></head>
+<body data-page="connections"><main class="content" style="margin-left:0;width:100%;height:auto;overflow:visible;padding:40px 32px;"><section class="hero reveal"><p class="eyebrow">APIs</p><h1>Connections</h1><p class="subtitle">Connect your own APIs securely.</p></section>
+<section class="section reveal"><div class="content-card stack">
+<form id="connectionForm" class="stack">
+<input name="provider_name" placeholder="Provider name" required>
+<input name="auth_type" placeholder="none | api_key | bearer_token" required>
+<input name="base_url" placeholder="Base URL" required>
+<input name="api_key_or_token" placeholder="API key or token">
+<textarea name="default_headers" rows="4" placeholder='{"Accept":"application/json"}'></textarea>
+<button class="button button--primary" type="submit">Save connection</button>
+</form>
+<div class="chat-controls">
+<input id="connectionId" placeholder="Connection ID">
+<button id="testConnectionBtn" class="button button--secondary" type="button">Test connection</button>
+<button id="deleteConnectionBtn" class="button button--secondary" type="button">Delete connection</button>
+</div>
+<pre id="connectionStatus" class="muted"></pre>
+<div id="connectionsList"></div>
+</div></section></main><script src="js/script.js"></script></body></html>

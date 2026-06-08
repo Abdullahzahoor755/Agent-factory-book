@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat | Agent Factory Book</title>
+  <meta name="description" content="Chat interface for the Agent Factory Book RAG tutor.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="chat">
+  <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebar">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar__brand">
+        <span class="brand-mark"></span>
+        <div>
+          <p class="brand-eyebrow">AI Tutor</p>
+          <h1>Chat</h1>
+        </div>
+      </div>
+      <nav class="sidebar__nav" aria-label="Primary">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="part0.html" class="nav-link">Part 0</a>
+        <a href="part1.html" class="nav-link">Part 1</a>
+        <a href="part2.html" class="nav-link">Part 2</a>
+        <a href="chat.html" class="nav-link">Chat</a>
+      </nav>
+      <div class="sidebar__footer">
+        <p>Ask only from the book content.</p>
+      </div>
+    </aside>
+
+    <main class="content">
+      <section class="hero hero--home reveal">
+        <p class="eyebrow">RAG Playground</p>
+        <h1>Book Tutor Chat</h1>
+        <p class="subtitle">Roman Urdu + simple English teacher that answers from the knowledge base, with chapter-aware sources and beginner-friendly explanations.</p>
+      </section>
+
+      <section class="section reveal">
+        <div class="content-card" style="display:grid;gap:16px;">
+          <label>
+            <span class="card-kicker">QUESTION</span>
+            <textarea id="chatQuestion" rows="5" placeholder="Apna سوال yahan likho..."></textarea>
+          </label>
+
+          <div class="chat-controls">
+            <label>
+              <span class="card-kicker">MODE</span>
+              <select id="chatMode">
+                <option value="normal">normal</option>
+                <option value="explain_simple">explain_simple</option>
+                <option value="summarize">summarize</option>
+                <option value="quiz">quiz</option>
+                <option value="practical_task">practical_task</option>
+                <option value="interview_prep">interview_prep</option>
+              </select>
+            </label>
+
+            <label>
+              <span class="card-kicker">CHAPTER</span>
+              <select id="chatChapter">
+                <option value="">All chapters</option>
+                <option value="Part 0 - AI & Tech Basics">Part 0</option>
+                <option value="Part 1 - General Agents">Part 1</option>
+                <option value="Part 2 - Agent Workflow Primitives">Part 2</option>
+                <option value="Glossary">Glossary</option>
+              </select>
+            </label>
+
+            <label>
+              <span class="card-kicker">API</span>
+              <input id="apiBaseUrl" type="text" value="http://127.0.0.1:8000" />
+            </label>
+          </div>
+
+          <button id="sendChat" class="button button--primary" type="button">Send</button>
+          <div id="chatStatus" class="subtitle" role="status" aria-live="polite"></div>
+          <div id="chatError" class="subtitle" role="alert" style="color:#fca5a5;"></div>
+
+          <article class="content-card">
+            <h3>Answer</h3>
+            <div id="chatAnswer" class="subtitle">No answer yet.</div>
+          </article>
+
+          <article class="content-card">
+            <h3>Sources</h3>
+            <div id="chatSources" class="subtitle">Sources will appear here.</div>
+          </article>
+
+          <article class="content-card">
+            <h3>Matched Chapters</h3>
+            <div id="chatChapters" class="subtitle">Matched chapters will appear here.</div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
